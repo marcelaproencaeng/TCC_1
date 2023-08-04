@@ -1,0 +1,23 @@
+server:
+  servlet:
+    context-path: /mongodb
+  port: 27017
+  error:
+    include-message: always
+
+spring:
+  datasource:
+
+    url:   mongodb://localhost:27017/marcela
+    uri:
+    driver-class-name: mongo-java-driver
+    username: marcela
+    password: eu1234
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    show-sql: true
+
+  mongo:
+    console:
+      enabled: true
