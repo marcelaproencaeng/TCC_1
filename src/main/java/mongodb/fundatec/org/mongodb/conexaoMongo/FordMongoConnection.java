@@ -26,10 +26,10 @@ public class FordMongoConnection {
 //    }
 //}
 
-    public Boolean inserir(String Fiesta,String Ano,String Valor) {
-        Document.put("Modelo", Fiesta);
+    public Boolean inserir(String Modelo,String Ano,String Valor) {
+        Document.put("Modelo", Modelo);
         Document.put("Ano",Ano);
-        Document.put("valor",Valor);
+        Document.put("Valor",Valor);
         colecao.insert(Document);
         return true;
     }
@@ -41,16 +41,16 @@ public class FordMongoConnection {
         }
     }
 
-    public Boolean atualizar(String FiestaAntigo, String FiestaNovo) {
-        Document.put("Modelo", FiestaAntigo);
+    public Boolean atualizar(String ModeloAntigo, String ModeloNovo) {
+        Document.put("Modelo", ModeloAntigo);
         BasicDBObject DocNovo = new BasicDBObject();
-        DocNovo.put("Modelo", FiestaNovo);
+        DocNovo.put("Modelo", ModeloNovo);
         colecao.findAndModify(Document, DocNovo);
         return true;
     }
 
-    public Boolean remover(String Fiesta) {
-        Document.put("Modelo", Fiesta);
+    public Boolean remover(String Modelo) {
+        Document.put("Modelo", Modelo);
         colecao.remove(Document);
         return true;
     }

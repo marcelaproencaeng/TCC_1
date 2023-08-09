@@ -15,9 +15,9 @@ public class Principal {
 //        SpringApplication.run(Principal.class, args);
 //    }
         FordMongoConnection conexao = new FordMongoConnection();
-        conexao.inserir("Ranger","2010","10000");
+        conexao.inserir("Fiesta","2010","10000");
         conexao.mostrar();
-//        conexao.atualizar("Ranger", "Maverick");
+//        conexao.atualizar("Fiesta", "Maverick");
 //        conexao.remover("Maverick");
 
 
